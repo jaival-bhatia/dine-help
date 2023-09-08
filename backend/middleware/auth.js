@@ -5,9 +5,10 @@ const User = require("../models/User");
 exports.Protect = asyncHandler(async (req, res, next) => {
     let token
 
-    if(req.header.authorization && req.header.authorization.startsWith('Bearer')){
+    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
+        console.log("token found")
         try{
-            token = req.header.authorization.split(' ')[1]
+            token = req.headers.authorization.split(' ')[1]
 
             const decoded = jwt.verify(token, "secretkey")
             console.log("success")
@@ -19,10 +20,10 @@ exports.Protect = asyncHandler(async (req, res, next) => {
             res.status(401)
             throw new Error('Not authorized')
         }
+        
     }
     if(!token){
         res.status(401)
         throw new Error('Not authorized, no token')
     }
 })
-

@@ -20,9 +20,11 @@ exports.getAllProduct = async (req, res) => {
 
 // get product specific id
 exports.getSpecific = async (req, res) => {
+
   try {
+    const key = req.params.id
     const result = await Product.findOne({
-      "key": req.params.id,
+      _id : key
     });
     if (result) {
       res.json(result);

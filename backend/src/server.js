@@ -1,8 +1,9 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
-dotenv.config({path: '../../db/variable.env'})
+dotenv.config() 
 require('../db/connection');
 
 const User = require('../models/User');
@@ -17,6 +18,12 @@ const orderRouter = require('../router/order-route');
 
 const app = express()
 
+app.use(cors({
+    origin : "http://localhost:3000/",
+    methods : "GET,POST,PUT,DELETE",
+    credentials : true
+}))
+
 
 
 app.use(express.json())
@@ -26,6 +33,7 @@ app.use(productRouter)
 app.use(orderRouter)
 
 
-app.listen(process.env.PORT, () => {    
+app.listen(3000, () => {  
+    // console.log(process.env.PORT)  
     console.log('Server is running on port 3000')
 })

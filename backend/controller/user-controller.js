@@ -1,8 +1,9 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
-const sendToken = require("../utils/jwtToken");
+const sendToken = require("../utils/generateToken");
 const shortid = require('shortid');
 const jwt =  require("jsonwebtoken")
+const {generateToken} = require("../utils/generateToken")
 
 
 // code to get every user detail
@@ -43,20 +44,7 @@ exports.getUserDetails = async (req, res) => {
   }
 };
 
-// code to verify token middleware
-// function tokenVerify(req,res,next){
-//   const token = req.header("auth-token");
-//   if(!token){
-//     return res.status(401).send("Access Denied");
-//   }
-//   try{
-//     const verified = jwt.verify(token,"secretkey");
-//     req.user = verified;
-//     next();
-//   }catch(err){
-//     res.status(400).send("Invalid Token");
-//   }
-// }
+
 
 
 
@@ -69,7 +57,7 @@ exports.userLogin = async (req, res) => {
       res.send("Enter Valid Email and Password");
     }
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+password");
 
     if (!user) {
       return res.status(401).send("Invalid credentials.");
@@ -79,17 +67,14 @@ exports.userLogin = async (req, res) => {
       return res.status(401).send("Invalid credentials.");
     }else{  
 
-        jwt.sign({user},'secretkey',{expiresIn:'1h'},(err,token)=>{
-        res.status(200).json({
-          _id : user._id,
-          name : user.name,
-          isAdmin : user.isAdmin,
-          email : user.email,
-          token
-        });
-    })
-    
-  } 
+      res.status(200).json({
+        _id : user._id,
+        name : user.name,
+        isAdmin : user.isAdmin,
+        email : user.email,
+        token : generateToken(user._id),
+      });
+    }
   } catch (error) {
     res.status(500).send("Error logging in.");
   }
@@ -98,7 +83,7 @@ exports.userLogin = async (req, res) => {
 
 //code to show profile 
 exports.showProfile = async (req,res) => {
-      
+     res.send("user found")
 }
 
 
@@ -114,19 +99,21 @@ exports.userSignup = async (req, res) => {
 
     if (userEmailExist || userPhoneExist) {
       res.send("user already exists with provided detail");
+    }else{
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const user = new User({
+        key : customKey,
+        name: username,
+        password: hashedPassword,
+        phone: phone,
+        email: email,
+      });
+      console.log(user);
+      await user.save();
+      res.status(201).send("User registered successfully.");
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({
-      key : customKey,
-      name: username,
-      password: hashedPassword,
-      phone: phone,
-      email: email,
-    });
-    console.log(user);
-    await user.save();
-    res.status(201).send("User registered successfully.");
+    
   } catch (error) {
     res.status(500).send("Error registering user.");
   }

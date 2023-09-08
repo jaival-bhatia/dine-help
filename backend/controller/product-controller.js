@@ -38,14 +38,13 @@ exports.getSpecific = async (req, res) => {
 exports.createProduct = async (req, res) => {
   try {
     const customKey = shortid.generate();
-    const { name, desc, price,totalQuantity } = req.body;
+    const { name,image, desc } = req.body;
     
       const product = new Product({
         key : customKey,
+        image,
         name,
-        desc,
-        price,
-        totalQuantity
+        description : desc,
       });
       console.log(product);
       await product.save();

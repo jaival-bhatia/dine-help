@@ -43,8 +43,7 @@ exports.getUserDetails = async (req, res) => {
   }
 };
 
-//code to verify token middleware
-
+// code to verify token middleware
 // function tokenVerify(req,res,next){
 //   const token = req.header("auth-token");
 //   if(!token){
@@ -81,7 +80,13 @@ exports.userLogin = async (req, res) => {
     }else{  
 
         jwt.sign({user},'secretkey',{expiresIn:'1h'},(err,token)=>{
-        res.status(200).json({token});
+        res.status(200).json({
+          _id : user._id,
+          name : user.name,
+          isAdmin : user.isAdmin,
+          email : user.email,
+          token
+        });
     })
     
   } 
@@ -93,16 +98,7 @@ exports.userLogin = async (req, res) => {
 
 //code to show profile 
 exports.showProfile = async (req,res) => {
-      jwt.verify(tokenVerify,"secretkey",(err, authData)=>{
-          if(err){
-            res.send("Error")
-          }else{
-            res.json({
-              message : "Success",
-              authData
-            })
-          }
-      })
+      
 }
 
 

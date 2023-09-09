@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import "../../assets/style/Login.css";
 import FormInput from "../../components/form/forminput";
 import React from "react";
 import axios from "axios";
-import { redirect , useNavigate} from "react-router-dom";
+import {useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
-const baseUrl = ""
+const baseUrl = "https://dine-help-api.onrender.com/api/v1/";
 
 const Signup = () => {
-  
-
+  const navigator = useNavigate();
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -17,7 +17,7 @@ const Signup = () => {
     password: "",
     confirmPassword: "",
   });
-  
+
   const inputs = [
     {
       id: 1,
@@ -57,35 +57,42 @@ const Signup = () => {
       pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
       required: true,
     },
-    {
-      id: 5,
-      name: "confirmPassword",
-      type: "password",
-      placeholder: "Confirm Password",
-      errorMessage: "Passwords don't match!",
-      label: "Confirm Password",
-      pattern: values.password,
-      required: true,
-    },
   ];
 
-  const handleSubmit = (values) => {
-        
-        axios.post("https://dine-help-api.onrender.com/api/v1/signup", {
-            username : values.username,
-            email : values.email,
-            phone  :   values.phone,
-            password : values.password
-        }).then((response) => {
-                console.log(response.data)
-          }).catch((err)=>{console.log(err)});
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let data = JSON.stringify({
+      username: values.username,
+      email: values.email,
+      phone: Number(values.phone),
+      password: values.password,
+    });
+    await axios
+      .post(`${baseUrl}signup`, data, {
+        headers: {
+          "content-type": "application/json",
+        },
+      })
+      .then((response) => {
+        if(response.status == '201' || response.status == '200'){
+          toast.success('Registered successfully')
+          localStorage.setItem('token', response.data.token)
+          localStorage.setItem('user', JSON.stringify(response.data.user))
+          localStorage.setItem('isLoggedIn', true)
+          navigator("/products" , {replace:true})
+        }else{
+          toast.error('Email already exists')
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
- 
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
@@ -104,4 +111,4 @@ const Signup = () => {
   );
 };
 
-export default Signup; 
+export default Signup;

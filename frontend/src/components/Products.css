@@ -100,15 +100,7 @@
   max-height: 100%;
 }
 
-.card-shadow {
-  background-color: #fff;
-  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
-    0 0 100px 3px rgba(0, 0, 0, 0.25);
-  height: 1px;
-  margin: -1px auto 0;
-  width: 80%;
-  z-index: -1;
-}
+
 
 
 .navbar {
@@ -141,7 +133,7 @@
   color: white;
 }
 
-/* Responsive CSS */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -194,22 +186,20 @@
   }
   .card-media{
     
-    filter: blur(3px);
+    filter: blur(5px);
     z-index: -1;
-    left: 20%;
+    left: 25%;
    
    
   }
 
   .card-tag {
-    float: none;
-    clear: both;
-    margin: 20px 10px;
+    margin-top: 2rem;
     }
   .card-description {
-    font-weight: bolder;
+    font-weight: 900;
     line-height: 22px;
-     margin: 15px 0; /* Adjust margin for spacing */
+     margin: 15px 0; 
      color: #000;
     }
 }

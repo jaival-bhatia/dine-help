@@ -18,7 +18,6 @@ const Productcard = ({productData}) => {
                         </span>
                       </div>
                       <img src={image} alt="images" className="card-media" />
-                      <div className="clearfix"></div> 
                       <span className="card-tag  subtle">Explore Now</span>
                     </div>
                   </div>

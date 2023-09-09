@@ -3,6 +3,7 @@ import './Products.css';
 import Product from './ProductAPI'; 
 import Productcard from './Productcard';
 import ProductNavbar from './ProductNavbar';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [productData, setProductData] = useState(Product);
@@ -67,6 +68,9 @@ const Products = () => {
             </svg>
           </button>
         </div>
+        <Link to="/">
+              <button className='Home-icon'><i class="fa-solid fa-house"></i></button>
+            </Link>
       </header>
       <>
         <ProductNavbar filterItem={filterItem} productList={productList} />

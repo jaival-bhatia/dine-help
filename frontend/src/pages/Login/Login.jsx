@@ -2,8 +2,13 @@ import React from "react";
 import { useState } from "react";
 import FormInput from "../../components/form/forminput";
 import "../../assets/style/Login.css"
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const baseUrl = "https://dine-help-api.onrender.com/api/v1/login"
 
 function Login() {
+  const navigator = useNavigate()
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -34,6 +39,12 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post(`${baseUrl}`, values)
+    .then(res => {
+        navigator("/products" , {replace: true})
+    }).catch(err => {
+      console.log(err)
+    })
   };
 
   const onChange = (e) => {

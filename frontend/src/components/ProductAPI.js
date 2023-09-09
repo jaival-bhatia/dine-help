@@ -7,6 +7,7 @@ const Product = [
     price: "2.5₹/kg",
     description: "Fresh and nutritious potatoes",
     shelfLife: "2 weeks",
+    details: "Potatoes are a kitchen essential, known for their versatility and hearty nature. They are the perfect raw material for your restaurant, whether you're frying, mashing, or roasting. Our high-quality, fresh potatoes ensure consistent flavor and texture, making them ideal for creating signature dishes that will keep your customers coming back for more.",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const Product = [
     price: "3.0₹/kg",
     description: "Juicy and ripe tomatoes",
     shelfLife: "1 week",
+    details: "Our tomatoes are vine-ripened to perfection, ensuring a burst of rich, natural flavor in every bite. From classic sauces to fresh salads, our tomatoes will elevate your culinary creations. Plump and juicy, these tomatoes are sure to inspire your restaurant's dishes with their vibrant color and unforgettable taste.",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const Product = [
     price: "2.2₹/kg",
     description: "Crunchy and sweet carrots",
     shelfLife: "2 weeks",
+    details: "Our carrots are farm-fresh and bursting with natural sweetness. These versatile roots are perfect for adding color, nutrition, and texture to your culinary creations. Whether roasted, sautéed, or used as a garnish, our carrots are an essential ingredient for adding vibrancy to your dishes.",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const Product = [
     price: "3.5₹/kg",
     description: "Nutrient-rich broccoli florets",
     shelfLife: "1 week",
+    details: "Tender and vibrant, our broccoli brings a fresh burst of green to your restaurant's menu. Perfect for stir-fries, soups, or as a side, these nutrient-packed florets provide an earthy, satisfying crunch that complements any dish. Elevate your cuisine with our premium broccoli.",
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const Product = [
     price: "2.8₹/kg",
     description: "Fresh and green spinach leaves",
     shelfLife: "1 week",
+    details: "Experience the crisp, tender leaves of our spinach, packed with vitamins and nutrients. A must-have for salads, sandwiches, and sautés, our spinach adds a healthy, earthy touch to your menu. Elevate your dishes with this versatile, leafy green.",
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ const Product = [
     price: "4.0₹/kg",
     description: "Colorful and flavorful bell peppers",
     shelfLife: "2 weeks",
+    details: "Our bell peppers bring vibrant color and crispness to your dishes. Perfect for stuffing, roasting, or sautéing, they infuse your recipes with a sweet, savory flavor. Enhance your culinary creations with our fresh, high-quality bell peppers.",
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ const Product = [
     price: "2.0₹/kg",
     description: "Sweet and aromatic onions",
     shelfLife: "3 weeks",
+    details: "A culinary cornerstone, our onions provide the aromatic base for countless dishes. Sautéed, caramelized, or raw, they infuse your recipes with rich, savory flavor. Our fresh, quality onions are essential for creating delicious, well-rounded dishes in your restaurant.",
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ const Product = [
     price: "4.0₹/kg",
     description: "Crisp and sweet apples",
     shelfLife: "2 weeks",
+    details: "Indulge in the crisp, sweet taste of our apples. Perfect for snacking or adding to desserts, our apples are a delightful treat. Their freshness and quality shine through in every bite, making them a must-have for your restaurant's menu.",
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ const Product = [
     price: "2.0₹/kg",
     description: "Ripe and healthy bananas",
     shelfLife: "1 week",
+    details: "Our ripe and healthy bananas are a source of natural sweetness and energy. Enjoy them as a snack, in smoothies, or as a versatile ingredient in your dishes. Their quality and flavor make them a favorite among our customers.",
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ const Product = [
     price: "3.5₹/kg",
     description: "Juicy and tangy oranges",
     shelfLife: "2 weeks",
+    details: "Experience the burst of citrus flavor with our juicy oranges. Whether you're juicing them for fresh beverages or adding zest to your dishes, our oranges are a versatile and tangy addition to your restaurant's offerings.",
   },
   {
     id: 11,
@@ -97,6 +107,7 @@ const Product = [
     price: "5.0₹/kg",
     description: "Sweet and succulent strawberries",
     shelfLife: "3 days",
+    details: "Savor the sweetness of our succulent strawberries. These berries are perfect for desserts, toppings, or simply enjoying as a healthy snack. Their rich flavor and vibrant color will enhance your restaurant's menu.",
   },
   {
     id: 12,
@@ -106,6 +117,7 @@ const Product = [
     price: "4.2₹/kg",
     description: "Plump and flavorful grapes",
     shelfLife: "1 week",
+    details: "Indulge in the plump and flavorful goodness of our grapes. Whether enjoyed as a snack or incorporated into your dishes, these grapes bring a burst of natural sweetness and freshness to your restaurant's offerings.",
   },
   {
     id: 13,
@@ -115,6 +127,7 @@ const Product = [
     price: "3.8₹/kg",
     description: "Tropical and delicious mangoes",
     shelfLife: "1 week",
+    details: "Transport your taste buds to the tropics with our delicious mangoes. These juicy and aromatic fruits are perfect for smoothies, desserts, or enjoying on their own. Elevate your restaurant's menu with the exotic flavor of our mangoes.",
   },
   {
     id: 14,
@@ -124,6 +137,7 @@ const Product = [
     price: "4.5₹/kg",
     description: "Sweet and tangy pineapples",
     shelfLife: "1 week",
+    details: "Experience the sweet and tangy delight of our pineapples. Perfect for snacking, adding to salads, or creating refreshing beverages, our pineapples bring a burst of tropical flavor to your restaurant's offerings.",
   },
   {
     id: 15,
@@ -133,6 +147,7 @@ const Product = [
     price: "1.5₹/liter",
     description: "Fresh and pure cow's milk",
     shelfLife: "1 week",
+    details: "Start your day with the freshness of our pure cow's milk. Whether enjoyed as a beverage or used in your culinary creations, our milk is the epitome of purity and quality. Elevate your restaurant's dairy offerings with our fresh milk.",
   },
   {
     id: 16,
@@ -142,6 +157,7 @@ const Product = [
     price: "8.0₹/kg",
     description: "Creamy and delicious cheese",
     shelfLife: "2 weeks",
+    details: "Indulge in the creamy and delicious goodness of our cheese. Whether used for melting, grating, or snacking, our cheese adds a rich and savory flavor to your dishes. Elevate your restaurant's menu with our premium cheese.",
   },
   {
     id: 17,
@@ -151,6 +167,7 @@ const Product = [
     price: "6.5₹/kg",
     description: "Rich and creamy butter",
     shelfLife: "2 weeks",
+    details: "Enhance the flavor of your dishes with our rich and creamy butter. Whether used for cooking, baking, or spreading, our butter adds a delightful richness that elevates your culinary creations. Make our butter a staple in your restaurant's kitchen.",
   },
   {
     id: 18,
@@ -160,6 +177,7 @@ const Product = [
     price: "2.0₹/liter",
     description: "Smooth and probiotic yogurt",
     shelfLife: "1 week",
+    details: "Enjoy the smooth and probiotic goodness of our yogurt. Perfect for parfaits, smoothies, or as a healthy snack, our yogurt is a versatile and nutritious addition to your restaurant's offerings. Delight your customers with the creamy texture and health benefits of our yogurt.",
   },
   {
     id: 19,
@@ -169,6 +187,7 @@ const Product = [
     price: "3.5₹/dozen",
     description: "Farm-fresh eggs",
     shelfLife: "2 weeks",
+    details: "Experience the freshness of our farm-fresh eggs. Whether used for breakfast, baking, or as a protein-packed addition to your dishes, our eggs are a staple ingredient in your restaurant's kitchen. Ensure quality and taste with our premium eggs.",
   },
   {
     id: 20,
@@ -178,6 +197,7 @@ const Product = [
     price: "4.0₹/liter",
     description: "Whipped and silky cream",
     shelfLife: "2 weeks",
+    details: "Indulge in the whipped and silky goodness of our cream. Perfect for adding richness to desserts, beverages, or savory dishes, our cream is a versatile ingredient that elevates your culinary creations. Make our cream a part of your restaurant's culinary repertoire.",
   },
   {
     id: 21,
@@ -187,6 +207,7 @@ const Product = [
     price: "2.5₹/liter",
     description: "Probiotic yogurt for a healthy diet",
     shelfLife: "2 weeks",
+    details: "Prioritize a healthy diet with our probiotic yogurt. Packed with beneficial probiotics, our yogurt supports gut health and is perfect for parfaits, smoothies, or as a wholesome snack. Make our probiotic yogurt a staple in your restaurant's menu for health-conscious customers.",
   },
   {
     id: 22,
@@ -196,6 +217,7 @@ const Product = [
     price: "6.0₹/kg",
     description: "Tender and juicy chicken Meat",
     shelfLife: "3 days",
+    details: "Savor the tenderness and juiciness of our chicken meat. Whether grilled, roasted, or incorporated into your dishes, our chicken meat adds a delightful protein source to your restaurant's offerings. Ensure the quality and flavor of your meat dishes with our premium chicken.",
   },
   {
     id: 23,
@@ -205,6 +227,7 @@ const Product = [
     price: "10.0₹/kg",
     description: "Fresh and flavorful fish fillet",
     shelfLife: "2 days",
+    details: "Experience the freshness and flavor of our fish fillet. Perfect for grilling, frying, or creating seafood delicacies, our fish fillet elevates your restaurant's seafood offerings. Delight your customers with the exquisite taste of our premium fish.",
   },
   {
     id: 24,
@@ -214,6 +237,7 @@ const Product = [
     price: "12.0₹/kg",
     description: "Premium quality lamb cuts",
     shelfLife: "4 days",
+    details: "Indulge in premium quality lamb cuts that bring exceptional flavor and tenderness to your dishes. Whether slow-cooked, grilled, or used in stews, our lamb is a versatile and savory addition to your restaurant's menu. Elevate your meat dishes with our top-quality lamb.",
   },
   {
     id: 25,
@@ -223,6 +247,7 @@ const Product = [
     price: "14.5₹/kg",
     description: "Delicate and tasty prawns",
     shelfLife: "2 days",
+    details: "Delight your customers with the delicate and tasty goodness of our prawns. Whether used in stir-fries, curries, or as a seafood appetizer, our prawns add a touch of luxury to your restaurant's offerings. Ensure freshness and flavor with our premium prawns.",
   },
   {
     id: 26,
@@ -232,6 +257,7 @@ const Product = [
     price: "8.0₹/kg",
     description: "Lean and flavorful turkey Meat",
     shelfLife: "3 days",
+    details: "Enjoy lean and flavorful turkey meat that's perfect for sandwiches, roasting, or special occasions. Our turkey meat adds a healthy protein source to your restaurant's offerings, and its quality and taste will impress your customers.",
   },
   {
     id: 27,
@@ -241,6 +267,7 @@ const Product = [
     price: "11.0₹/kg",
     description: "Exquisite duck Meat for special occasions",
     shelfLife: "4 days",
+    details: "Elevate special occasions with the exquisite flavor of our duck meat. Whether roasted, confit, or used in gourmet dishes, our duck meat adds a touch of sophistication to your restaurant's menu. Impress your diners with the premium quality of our duck.",
   },
   {
     id: 28,
@@ -250,6 +277,7 @@ const Product = [
     price: "2.0₹/kg",
     description: "High-quality rice grains",
     shelfLife: "1 year",
+    details: "Embrace high-quality rice grains that form the basis of countless dishes. Whether used in stir-fries, sushi, or as a side, our rice adds a comforting and versatile element to your restaurant's menu. Ensure consistency and quality with our premium rice.",
   },
   {
     id: 29,
@@ -259,6 +287,7 @@ const Product = [
     price: "3.5₹/kg",
     description: "Fine wheat flour for baking",
     shelfLife: "6 months",
+    details: "Create delightful baked goods with our fine wheat flour. Perfect for bread, cakes, and pastries, our flour ensures a light and fluffy texture in your culinary creations. Elevate your baking with the quality and consistency of our wheat flour.",
   },
   {
     id: 30,
@@ -268,6 +297,7 @@ const Product = [
     price: "2.8₹/kg",
     description: "Healthy and hearty rolled oats",
     shelfLife: "8 months",
+    details: "Start your day with the heartiness of our rolled oats. Perfect for breakfast bowls, granola, or baking, our oats add nutrition and texture to your dishes. Elevate your restaurant's health-conscious offerings with our hearty oats.",
   },
   {
     id: 31,
@@ -277,6 +307,7 @@ const Product = [
     price: "2.2₹/kg",
     description: "Versatile cornmeal for cooking",
     shelfLife: "10 months",
+    details: "Add versatility to your kitchen with our cornmeal. Perfect for making cornbread, polenta, or as a coating for fried dishes, our cornmeal enhances the texture and flavor of your recipes. Elevate your restaurant's comfort food offerings with our versatile cornmeal.",
   },
   {
     id: 32,
@@ -286,6 +317,7 @@ const Product = [
     price: "4.0₹/kg",
     description: "Assorted pasta shapes for delicious dishes",
     shelfLife: "1 year",
+    details: "Explore a world of pasta possibilities with our assorted shapes. Perfect for creating diverse and delectable dishes, our pasta adds creativity to your restaurant's menu. Elevate your culinary creations with the quality and variety of our pasta.",
   },
   {
     id: 33,
@@ -295,6 +327,7 @@ const Product = [
     price: "6.0₹/kg",
     description: "Nutrient-rich quinoa grains",
     shelfLife: "1 year",
+    details: "Boost the nutrition of your dishes with our nutrient-rich quinoa grains. Perfect for salads, bowls, or as a side, our quinoa adds protein and texture to your restaurant's offerings. Elevate your menu with the health benefits and versatility of our quinoa.",
   },
   {
     id: 34,
@@ -304,7 +337,9 @@ const Product = [
     price: "2.5₹/kg",
     description: "Wholesome barley grains for soups and stews",
     shelfLife: "8 months",
+    details: "Enhance the heartiness of your soups and stews with our wholesome barley grains. Perfect for adding texture and nutrition, our barley elevates your restaurant's comfort food offerings. Ensure quality and consistency with our premium barley.",
   },
 ];
+
 
 export default Product;

@@ -1,0 +1,142 @@
+.cart-container {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2 {
+  background-color: #34A853;
+  color: #FFFFFF;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center; /* Center the text horizontally */
+}
+
+.cart-item {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-item-details {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+  margin: 10px 0;
+}
+
+p {
+  font-size: 16px;
+  color: #555; /* Slightly darker text color */
+  margin: 5px 0;
+}
+
+input[type="number"] {
+  width: 60px; /* Adjust as needed */
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.remove-button {
+  background-color: #DD4B39;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cart-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cart-total p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+.buy-button {
+  background-color: #34A853;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-more-button {
+  background-color: #4285F4;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  input[type="number"] {
+    width: 50px;
+    font-size: 16px;
+  }
+
+  .cart-total p {
+    font-size: 20px;
+  }
+
+  .buy-button,
+  .add-more-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
+
+.cart-item-image img {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+}
+
+@media (min-width: 769px) {
+  .cart-item-image img {
+    width: 200px;
+    height: 200px;
+  }}

@@ -1,6 +1,7 @@
-import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom';
+import React ,{ useState } from 'react';
+
 
 
 
@@ -43,14 +44,14 @@ a culinary journey like no other.</h1>
 
    </div>
    
-
+    
     </div>
         <div className='Endlink'> 
         
         <Link className="exp-products"to="/Products"><h1> <i class="fa-solid fa-shop"></i> Explore The Market!</h1></Link></div>
        
 
-    </div>
+    
     <div className='Locationbtn'><button className="enable-location-button" onClick={handleLocationEnableClick}>
           Enable Location
         </button></div>

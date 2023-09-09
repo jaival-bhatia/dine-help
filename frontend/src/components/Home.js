@@ -1,16 +1,37 @@
 import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom';
+
+
+
 const Home = () => {
-  
+
+    const [userLocation, setUserLocation] = useState(null);
+    const handleLocationEnableClick = () => {
+        if ('geolocation' in navigator) {
+          
+          navigator.geolocation.gelo((position) => {
+            const { latitude, longitude } = position.coords;
+            setUserLocation({ latitude, longitude });
+            console.log(latitude, longitude);
+           
+          }, (error) => {
+            console.error('Error getting location:', error);
+            alert('Location access denied. Please enable location services in your browser settings.');
+          });
+        } else {  
+          alert('Geolocation is not supported by your browser.');
+        }
+      };
+
   return (
     <>
        <div className="home-container">
        <header>
         <h1 className="heading">DineHelp</h1>
         <div className="sign-in-sign-up">
-        <a className='Login' href=''>Log In</a>
-        <a className='signup' href=''>Sign Up</a>
+        <Link className="login" to="/login">Sign In</Link> 
+        <Link className="signup" to="/signup">Sign Up</Link> 
         </div>
       </header>
    <div className='Slogan-box'>
@@ -22,11 +43,19 @@ a culinary journey like no other.</h1>
 
    </div>
    
+
     </div>
         <div className='Endlink'> 
         
         <Link className="exp-products"to="/Products"><h1> <i class="fa-solid fa-shop"></i> Explore The Market!</h1></Link></div>
        
+
+    </div>
+    <div className='Locationbtn'><button className="enable-location-button" onClick={handleLocationEnableClick}>
+          Enable Location
+        </button></div>
+     
+
     </>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Productcard = ({productData}) => {
   return (
@@ -18,7 +19,9 @@ const Productcard = ({productData}) => {
                         </span>
                       </div>
                       <img src={image} alt="images" className="card-media" />
-                      <span className="card-tag  subtle">Explore Now</span>
+                      <Link to={`/ExploreNow/${id}`} className="card-tag subtle">
+                  Explore Now
+                </Link>
                     </div>
                   </div>
                   

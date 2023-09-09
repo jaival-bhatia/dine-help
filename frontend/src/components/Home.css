@@ -1,4 +1,8 @@
+body{
+  overflow: hidden;
+}
 header {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +61,7 @@ header {
     text-align: right;
   }
   
-  .Login {
+  .login {
     color: #FFF;
     font-family: 'Poppins', sans-serif;
     font-size: 1.25rem;

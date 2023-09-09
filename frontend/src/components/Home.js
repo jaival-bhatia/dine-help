@@ -38,7 +38,7 @@ const Home = () => {
   
     <h1 className='Slogancontent'>Welcome to DineHelp,<br /> Your one-stop destination for <br /> 
 a culinary journey like no other.</h1>
-<div className='logo'><img src="/images/logo.png" alt="logo" /></div>
+ <div className='logo'><img src="/images/logo.png" alt="logo" /></div>
 
    </div>
    
